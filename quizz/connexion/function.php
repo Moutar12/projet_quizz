@@ -1,33 +1,31 @@
 <?php
-include('./connexion/traitement.php');
-function connexion($login, $pwd)
-{
-    $users=getData();
-        if($users["login"]===$login && $users["password"]===$pwd){
-            $_SESSION['user']=$users;
-            $_SESSION['log']="login";
-            if($user["profil"]==="admin"){
-                return "acceuil";
-            }else{
-                return "jeux";
+require('connexion.php');
+function connexion($user, $ligne){
+    if($user['login']===$ligne['login'] && $user['mot_de_passe']===$ligne['pwd']){
+        $_SESSION['user']=$ligne;
+        if($ligne==='admin'){
+            return "admin";
+        }
+            else{
+                return "joueur";
             }
         }
-    
-    return "error";
+        return "error";
+    }
+function validation($value){
+    $value=trim($value);
+    $value=stripslashes($value);
+    return $value=htmlspecialchars($value);
 }
+
 function is_connect(){
-    if(!isset( $_SESSION['log'])){
-        header("Location:index.php");
+    if(!isset( $_SESSION['login'])){
+        header("Location:..index.php");
     }
 }
-function getData()
-{
-    $pdo = new PDO('mysql:dbname=quizz;host=localhost', 'root', '');
-    $pdo->setattribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $result = $pdo->query('SELECT * FROM personnes');
-    $res = $pdo->query('SELECT login,mot_de_passe FROM personnes');
-    $mp=$res->fetchAll(PDO::FETCH_OBJ);
-    $data =$result->fetchAll(PDO::FETCH_OBJ);
+function bdRequete($conn,$requet){
+    $reponse = $pdo->query($requet);
+    return $reponse = $reponse->fetch();
 }
 
 function deconnexion(){
