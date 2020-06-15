@@ -1,21 +1,21 @@
 <?php
 
 
+$servername = 'mysql-ndiath.alwaysdata.net';
+$username = 'ndiath';
+$password = 'Moutar12';
+$bdnames = 'ndiath_quizz';
 
-$servername = 'localhost';
-$username = 'root';
-$password = '';
-$bdname = 'quizz';
-$bd ='mysql:host=$servername';
-$requete = 'SELECT * FROM personnes';
+
 
 
 try {
-  $pdo = new PDO("mysql:host=$servername;dbname=quizz", $username, null);
+  $pdo = new PDO("mysql:host=$servername;dbname=$bdnames", $username, $password);
   // set the PDO error mode to exception
   $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-} catch(PDOException $e) {
+} 
+catch(PDOException $e) {
   echo "Connexion failed: " . $e->getMessage();
 }
 

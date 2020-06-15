@@ -1,9 +1,7 @@
 <?php
   echo "connexion reusie";
-  include("../connexion/connexion.php");
-include("../connexion/control_session.php");
-require_once("../connexion/function.php");
-is_connect();
+include("../traitement/control_session.php");
+
 $requet=$pdo->query("SELECT prenom, nom, f.libelle FROM personnes, fonction f WHERE login= '".$_SESSION['login']."'");
 $requet->execute();
 $data=$requet->fetch();
@@ -12,11 +10,13 @@ echo $data['nom'];
 echo $data['libelle'];
 
 
-  
+ 
   
 
   ?>
   <br>
 <div class="href">
-<a href="../index.php">Déconnexion</a>
+<?php
+echo "<a href='../index.php'>Déconnexion</a>"
+?>
 </div>

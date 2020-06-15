@@ -1,0 +1,136 @@
+.bg {
+  
+ width: 100%;
+ 
+  
+}
+
+.logo {
+  position: absolute;
+  margin-top: -115px;
+  width: 25em;
+  height: 5em;
+}
+form{
+  justify-content: center;
+  align-items: center;
+}
+
+ .header{
+  background-color: white;
+  width: 35em;
+  height: 25em;
+  margin-top: 45px;
+  margin-left: 13em;
+
+}
+.natif{
+    background-color:#9EAFCF; 
+    height:5em"
+}
+.body
+{
+  background-image: url("bg.jpg");
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.libody{
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-color:#C4C4C4; 
+}
+.lien{
+  position: absolute;
+ margin-left: 80%;
+ border: #C4C4C4 1px solid;
+ border-radius: 5px;
+ text-align: center;
+ font-weight: bold;
+ font-size: 15px;
+ margin-top: -55px;
+ background-color: #C4C4C4;
+ height: 40px;
+ width: 150px;
+ line-height: 45px;
+
+ 
+}
+.liendebase{
+  border:1px solid gray; 
+  background:#6BF1FA;
+  margin-top:5px; 
+  line-height: -45px;
+}
+input[type=file]{
+  background-color: aqua;
+    margin-top: -20px;
+    left: 330px;
+    position: absolute;
+    width: 16px;
+    height: 25px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: -15px;
+    color:#f8fdfd; 
+}
+.btn{
+  margin-left: 240px;
+  background-color:#6BF1FA;
+  margin-top: -70px;
+  
+}
+#ajoute{
+  margin-left: 275px;
+  background-color:#6BF1FA;
+ 
+}
+#enregistrer{
+  margin-top: 5px;
+  background-color:#6BF1FA;
+  font-weight: bold;
+  line-height: -15px;
+  color:#f8fdfd; 
+}
+#delete{
+  margin-left: -25px;
+}
+.div1{
+  background-color:#f8fdfd;
+  width:100vw;
+  height: 45em;
+  
+}
+.form{
+ margin-left:30em; 
+ border:1px sloid gray;
+ margin-top:1em;
+}
+.parametre, p {
+  text-align: center;
+  font-weight: bold;
+  font-size:25px;
+  line-height: 75px;
+  color:#6BF1FA; 
+ 
+}
+#ajoute{
+  margin-top: -32px;
+  margin-left: 245px;
+}
+#enregistrer{
+  margin-left: 30em;;
+}
+#form{
+  margin-top: -35px;
+}
+
